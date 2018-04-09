@@ -1,0 +1,20 @@
+<html>
+    <head>
+     <title>My first Json</title>
+    </head>
+    <div name="jsonData"></div>
+   
+    <script>
+        var json = ' {"data":[{"name":"Ramya", "class":"Masters","age":23},{"name":"Gopi", "class":"Job","age":25},{"name":"Manu", "class":"Masters","age":24},{"name":"Karthik", "class":"Masters","age":24},{"name":"Nithi", "class":"Masters","age":24}]}';
+    
+        var Object = JSON.parse(json);
+        var tableData ="<table>";
+        tableData += "<tr><th>name</th><th>class</th><th>age</th></tr>"
+        for (var i=0; i<=4; i++)
+        {
+            tableData += "<tr><td>"+Object.data[i].name+"</td><td>"+Object.data[i].class+"</td><td>"+Object.data[i].age+"</td></tr>";
+        }
+        tableData +="</table>";
+        document.getElementsByName("jsonData")[0].innerHTML = tableData;
+    </script>
+</html>
